@@ -42,10 +42,10 @@ spec:
             periodSeconds: 10
             timeoutSeconds: 5
             failureThreshold: 3
-          # volumeMounts:
-          #   - name: jenkins-data
-          #     mountPath: /var/jenkins_home         
-      # volumes:
-      #   - name: jenkins-data
-      #     persistentVolumeClaim:
-      #         claimName: jenkins-pv-claim
+          volumeMounts:
+            - name: jenkins-data
+              mountPath: /var/jenkins_home        
+      volumes:
+        - name: jenkins-data
+          persistentVolumeClaim:
+              claimName: jenkins-pv-claim

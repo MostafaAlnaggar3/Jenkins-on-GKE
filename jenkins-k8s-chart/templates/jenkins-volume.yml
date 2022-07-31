@@ -1,7 +1,7 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: silver
+  name: jenkins-sg
   namespace: devops-tools
 provisioner: kubernetes.io/gce-pd
 volumeBindingMode: Immediate
@@ -19,11 +19,13 @@ metadata:
   name: jenkins-pv-claim
   namespace: devops-tools
 spec:
-  storageClassName: silver
+  volumeMode: Filesystem
+  storageClassName: jenkins-sg
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 10Gi
+      storage: 15Gi
+
 
       
