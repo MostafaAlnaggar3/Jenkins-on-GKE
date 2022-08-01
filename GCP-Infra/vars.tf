@@ -16,5 +16,5 @@ variable "gke-master-ip" {
 
 variable "image-id" {
   type    = string
-  default = "mostafa-alnaggar-project/vm-gke-cluster"
+  default = "mostafa-alnaggar-project/gke-vm"
 }
