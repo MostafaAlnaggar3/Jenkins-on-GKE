@@ -114,7 +114,7 @@ Check k8s resources:
 Access Jenkins service IP on [http://34.140.33.50:8080/](http://34.140.33.50:8080/) ,get the administrator password, install recommended plugins and create admin user:
 
 ```bash
-# administrator password
+# get administrator password
 $ kubectl exec -it pod/jenkins-8499454ff4-dsw9h bash
 $ cat /var/jenkins_home/secrets/initialAdminPassword
 ```
