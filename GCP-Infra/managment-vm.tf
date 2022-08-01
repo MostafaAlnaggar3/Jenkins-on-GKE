@@ -1,6 +1,6 @@
-# Manegment instace
-resource "google_compute_instance" "python-app-management-vm" {
-  name         = "python-app-management-vm"
+# Manegment instace "jenkins-slave"
+resource "google_compute_instance" "jenkins-management-vm" {
+  name         = "jenkin-smanagement-vm"
   machine_type = "e2-medium"
   zone         = "${var.region}-b"
 
@@ -16,7 +16,7 @@ resource "google_compute_instance" "python-app-management-vm" {
   }
 
   network_interface {
-    network    = module.Network.python-app-vpc-name
-    subnetwork = module.Network.python-app-managment-subnet-name
+    network    = module.Network.jenkins-vpc-name
+    subnetwork = module.Network.jenkins-managment-subnet-name
   }
 }

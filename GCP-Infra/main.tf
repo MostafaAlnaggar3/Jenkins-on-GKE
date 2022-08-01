@@ -1,6 +1,6 @@
 module "Network" {
-  source                          = "./Network"
-  region                          = var.region
-  python-app-managment-subnet-ip  = var.python-app-managment-subnet-ip
-  python-app-restricted-subnet-ip = var.python-app-restricted-subnet-ip
+  source                       = "./Network"
+  region                       = var.region
+  jenkins-managment-subnet-ip  = var.jenkins-managment-subnet-ip
+  jenkins-restricted-subnet-ip = var.jenkins-restricted-subnet-ip
 }

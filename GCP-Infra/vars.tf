@@ -2,11 +2,11 @@ variable "region" {
   type = string
 }
 
-variable "python-app-managment-subnet-ip" {
+variable "jenkins-managment-subnet-ip" {
   type = string
 }
 
-variable "python-app-restricted-subnet-ip" {
+variable "jenkins-restricted-subnet-ip" {
   type = string
 }
 

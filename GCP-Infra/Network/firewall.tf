@@ -1,9 +1,9 @@
-#==========================> FW to allow ssh
+# FW to allow ssh
 
-resource "google_compute_firewall" "python-app-fw-allow-ssh" {
+resource "google_compute_firewall" "jenkins-fw-allow-ssh" {
 
-  name          = "python-app-fw-allow-ssh"
-  network       = google_compute_network.python-app-vpc.name
+  name          = "jenkins-fw-allow-ssh"
+  network       = google_compute_network.jenkins-vpc.name
   source_ranges = ["0.0.0.0/0"]
 
   allow {
@@ -12,19 +12,3 @@ resource "google_compute_firewall" "python-app-fw-allow-ssh" {
   }
 
 }
-
-# ==========================> FW to denay all egress traffic for restricted targets
-
-# resource "google_compute_firewall" "python-app-fw-denay-all" {
-
-#   name          = "python-app-fw-denay-all"
-#   network       = google_compute_network.python-app-vpc.name
-#   direction     = "EGRESS"
-#   source_ranges = ["0.0.0.0/0"]
-#   target_tags   = ["restricted"]
-
-#   deny {
-#     protocol = "all"
-#   }
-
-# }
