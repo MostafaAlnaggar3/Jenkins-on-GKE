@@ -2,16 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jenkins
-  namespace: devops-tools
+  namespace: jenkins-ns
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jenkins-server
+      app: jenkins-master
   template:
     metadata:
       labels:
-        app: jenkins-server
+        app: jenkins-master
     spec:
       # securityContext for Jenkins pod to be able to write to the local persistent volume.
       securityContext:  
@@ -48,4 +48,4 @@ spec:
       volumes:
         - name: jenkins-data
           persistentVolumeClaim:
-              claimName: jenkins-pv-claim
+              claimName: jenkins-pvc

@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: jenkins-service
-  namespace: devops-tools
+  name: jenkins-svc
+  namespace: jenkins-ns
 spec:
   selector: 
-    app: jenkins-server
+    app: jenkins-master
   type: LoadBalancer
   ports:
     - port: 8080

@@ -2,7 +2,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: jenkins-sg
-  namespace: devops-tools
+  namespace: jenkins-ns
 provisioner: kubernetes.io/gce-pd
 volumeBindingMode: Immediate
 allowVolumeExpansion: true
@@ -16,8 +16,8 @@ parameters:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: jenkins-pv-claim
-  namespace: devops-tools
+  name: jenkins-pvc
+  namespace: jenkins-ns
 spec:
   volumeMode: Filesystem
   storageClassName: jenkins-sg

@@ -1,6 +1,6 @@
 # Manegment instace "jenkins-slave"
 resource "google_compute_instance" "jenkins-management-vm" {
-  name         = "jenkin-smanagement-vm"
+  name         = "jenkins-management-vm"
   machine_type = "e2-medium"
   zone         = "${var.region}-b"
 
