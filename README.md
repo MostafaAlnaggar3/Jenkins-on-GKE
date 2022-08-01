@@ -1,3 +1,11 @@
+## Project requirements:
+Deploy backend application on kubernetes cluster using CI/CD
+jenkins pipeline using the following steps and high-level
+diagram :
+1. Implement secure Kubernetes cluster
+2. Deploy and configure Jenkins on Kubernetes.
+3. Deploy backend application on Kubernetes using Jenkins pipeline. --> [Repo](https://github.com/MostafaAlnaggar3/CI-CD-Pipeline-nodejs-app)
+---
 ## Repo components:
 
 - GCP-infra: this directory have terraform files that it used to build GCP resources.
@@ -123,3 +131,4 @@ $ cat /var/jenkins_home/secrets/initialAdminPassword
 Finally, welcome to Jenkins 🥳:
 
 <img src="images/Untitled 4.png"/>
+
