@@ -87,8 +87,9 @@ These configurations will install the first time of creating the instance and af
 # copy helm chart
 $ gcloud compute scp --recurse jenkins-chart jenkins-management-vm:~/
 
-# create jenkins namesapce
+# create jenkins and jenkins-app namesapce
 $ kubectl create namespace jenkins-ns
+$ kubectl create namespace jeknins-app
 
 # change namespace
 $ kubectl config set-context --current --namespace=jenkins-ns
