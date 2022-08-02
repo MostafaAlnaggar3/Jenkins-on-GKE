@@ -83,7 +83,7 @@ $ gcloud container clusters get-credentials jenkins-gke-cluster --zone europe-we
 $ kubectl get nodes
 ```
 
-These configurations will install the first time of creating the instance and after creating it, I will make a new image from it to use if I need to make a new instance again as I make it in the management-vm terraform file.
+These configurations will install the first time of creating the instance and after creating it, I will make a new image from it to use if I need to make a new instance again as I made it in the management-vm terraform file.
 
 <img src="images/Untitled 2.png"/>
 
@@ -105,14 +105,9 @@ $ kubectl config set-context --current --namespace=jenkins-ns
 # install helm chart
 $ helm install jenkins jenkins-chart
 
-# check pods
-$ kubectl get po
+# check Check k8s resources
+$ kubectl get all
 
-# check services
-$ kubectl get svc
-
-# check ingress
-$ kubectl get ingress
 ```
 
 Check k8s resources:
