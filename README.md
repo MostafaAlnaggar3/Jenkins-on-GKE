@@ -42,7 +42,7 @@ Check resources on GCP:
 
 ---
 
-### 2- Connect to management instance and install gcloud, kubectl, docker, and helm:
+### 2- Connect to management instance and install gcloud, kubectl, and helm:
 
 ```bash
 # ssh on management instance
@@ -52,11 +52,6 @@ $ gcloud compute ssh --zone "europe-west1-b" "jenkins-management-vm"  --tunnel-t
 $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 $ chmod 700 get_helm.sh
 $ ./get_helm.sh
-
-# install docker
-$ sudo apt-get update
-$ sudo apt-get install docker.io
-$ sudo chmod 666 /var/run/docker.sock
 
 # install gcloud-sdk and initialize gcloud
 $ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-394.0.0-linux-x86_64.tar.gz
